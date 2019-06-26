@@ -164,7 +164,7 @@
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-1 am-form-label">文章内容</label>
                                     <div class="am-u-sm-11">
-                                        <script id="container" name="content" type="text/plain">{{strip_tags($article->content)}}</script>
+                                        <script id="container" name="content" type="text/plain">{!! $article->content !!}</script>
                                     </div>
                                 </div>
 

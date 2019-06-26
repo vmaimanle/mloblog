@@ -26,7 +26,6 @@
 <!-- header start -->
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
-        <img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/>
         <h2 class="am-hide-sm-only">欢迎来到Miraclo的博客</h2>
     </div>
 </header>
@@ -39,6 +38,11 @@
 
     <div class="am-collapse am-topbar-collapse" id="blog-collapse">
         <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li>
+                <a style="cursor: pointer;" href="{{route('index', 0)}}">
+                    首页
+                </a>
+            </li>
             @foreach($cate as $g)
                 <li @if($article->category_id == $g->id) class="am-active" @endif>
                     <a style="cursor: pointer;" href="{{route('index', $g->id)}}">
@@ -107,7 +111,7 @@
 <!-- content end -->
 
 <footer class="blog-footer">
-    <div class="blog-text-center">Copyright ©{{date('Y', time())}} Miraclo</div>
+    <div class="blog-text-center">Copyright ©{{date('Y', time())}} 备案号：粤ICP备19071193</div>
 </footer>
 
 

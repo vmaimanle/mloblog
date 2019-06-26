@@ -80,6 +80,8 @@ class ArticleController extends Controller
             $is_show = 0;
         }
 
+        var_dump($request);exit();
+
         Article::create([
             'title' => $request->title,
             'category_id' => $request->category_id,

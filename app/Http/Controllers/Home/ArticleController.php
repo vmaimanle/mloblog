@@ -13,9 +13,6 @@ class ArticleController extends Controller
     //首页
     public function index(Request $request) {
         $cate_id = $request->cate_id;
-        if (!$cate_id){
-            $cate_id = 1;
-        }
 
         //搜索
         $keyword = $request->keyword;
@@ -24,9 +21,18 @@ class ArticleController extends Controller
         $cate = Category::all();
 
         if ($keyword){
-            $rs = Article::where('is_show', '1')->where('category_id', $cate_id)->where('title', 'like', "%$keyword%")->orderBy('id', 'DESC')->paginate(8);
+            //首页显示全部
+            if ($cate_id == 0){
+                $rs = Article::where('is_show', '1')->where('title', 'like', "%$keyword%")->orderBy('id', 'DESC')->paginate(8);
+            }else{
+                $rs = Article::where('is_show', '1')->where('category_id', $cate_id)->where('title', 'like', "%$keyword%")->orderBy('id', 'DESC')->paginate(8);
+            }
         }else{
-            $rs = Article::where('is_show', '1')->where('category_id', $cate_id)->orderBy('id', 'DESC')->paginate(8);
+            if ($cate_id == 0){
+                $rs = Article::where('is_show', '1')->orderBy('id', 'DESC')->paginate(8);
+            }else{
+                $rs = Article::where('is_show', '1')->where('category_id', $cate_id)->orderBy('id', 'DESC')->paginate(8);
+            }
         }
 
         if ($rs){

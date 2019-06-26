@@ -26,7 +26,6 @@
 
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
-        <img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/>
         <h2 class="am-hide-sm-only">欢迎来到Miraclo的博客</h2>
     </div>
 </header>
@@ -36,6 +35,11 @@
 
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li @if($cate_id == 0)class="am-active" @endif >
+            <a style="cursor: pointer;" href="{{route('index', 0)}}">
+                首页
+            </a>
+        </li>
         @foreach($cate as $g)
         <li @if($cate_id == $g->id) class="am-active" @endif>
             <a style="cursor: pointer;" href="{{route('index', $g->id)}}">
@@ -85,17 +89,17 @@
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
-            <img src="/imges/f14.jpg" alt="about me" class="blog-entry-img" >
+            <img src="/imges/tou.jpg" alt="about me" class="blog-entry-img" >
             <p>Miraclo</p>
             <p>
-        这里是一个小小码农成长的地方。
-        </p><p>坚持！加油！</p>
+        欢迎来到我的博客，这里记录和发布了一些技术文章，让我们在不断的学习当中充实自己，每天都进步一点点。
+        </p>
         </div>
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
             <p>
                 <span class="am-icon-qq am-icon-fw am-primary blog-icon" data-am-popover="{content: 'qq: 597738979'}"></span>
-                <span class="am-icon-weixin am-icon-fw blog-icon" data-am-popover="{content: 'wx: manle00'}"></span>
+                {{--<span class="am-icon-weixin am-icon-fw blog-icon" data-am-popover="{content: 'wx: manle00'}"></span>--}}
             </p>
         </div>
         {{--<div class="blog-sidebar-widget blog-bor">--}}
@@ -113,7 +117,7 @@
 
 
  <footer class="blog-footer">
-    <div class="blog-text-center">Copyright ©{{date('Y', time())}} Miraclo</div>
+    <div class="blog-text-center">Copyright ©{{date('Y', time())}} 备案号：粤ICP备19071193</div>
   </footer>
 
 

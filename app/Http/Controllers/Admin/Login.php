@@ -44,6 +44,10 @@ class Login extends Controller
 
     //退出
     public function destroy() {
+
+
+
+
         Auth::logout();
         session()->flash('success', '全世界最靓的仔，您已成功退出！');
         return redirect('login');

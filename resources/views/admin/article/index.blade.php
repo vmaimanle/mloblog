@@ -221,7 +221,7 @@
             window.location.href = '{{route('article.create')}}'
         })
         $('#logout').click(function () {
-            $('form').submit();
+            $(this).find('form').submit();
         })
     })
 </script>

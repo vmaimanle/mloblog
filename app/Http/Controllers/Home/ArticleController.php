@@ -63,6 +63,7 @@ class ArticleController extends Controller
             $per_title = $per->title;
             $per_id = $per->id;
         }else{
+            $per_title = '';
             $per_id = '';
         }
 
@@ -73,6 +74,7 @@ class ArticleController extends Controller
             $next_title = $next->title;
             $next_id = $next->id;
         }else{
+            $next_title = '';
             $next_id = '';
         }
 

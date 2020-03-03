@@ -3,6 +3,8 @@ lock "~> 3.12.0"
 
 set :application, "mloblog"
 set :repo_url, "git@github.com:vmaimanle/mloblog.git"
+set :deploy_to, "/www/wwwroot/mloblog.cn"
+set :keep_releases, 5
 
 namespace :deploy do
     desc "Build"

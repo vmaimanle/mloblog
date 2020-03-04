@@ -4,6 +4,7 @@
     <list default="true" id="ccf1953d-a610-4a82-9ec2-67cbaa4098fe" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/deploy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/deploy.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/capistrano.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/capistrano.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +251,7 @@
       <workItem from="1561638641129" duration="4547000" />
       <workItem from="1562076845508" duration="808000" />
       <workItem from="1578466588638" duration="627000" />
-      <workItem from="1583207395920" duration="4586000" />
+      <workItem from="1583207395920" duration="7510000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ namespace :deploy do
     after :updated, :build do
         on roles(:web) do
             within release_path do
-                execute :composer, "install --no-dev --quiet"
+                execute :composer, "install --no-dev --quiet --ignore-platform-reqs"
             end
         end
     end
